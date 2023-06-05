@@ -1,0 +1,50 @@
+*{
+    box-sizing: border-box;
+  }
+  
+  body{
+      font-family: RobotoRegular;
+      background-color: var(--clr--main-color);
+      background-image: linear-gradient(to bottom right, var(--clr--secondary-color),var(--clr--tertiary-color));
+      background-size: cover;
+      height: 100%;
+      width: 100%;
+  }
+  :root{
+      --clr--main-color: rgb(192, 230, 238);
+      --clr--secondary-color: rgb(233, 215, 210);
+      --clr--tertiary-color: rgb(245, 248, 249);
+  
+  }
+  @font-face {
+      font-family: RobotoBold;
+      src: url(/media/font/Roboto-Bold.ttf);
+  }
+  @font-face {
+    font-family: RobotoRegular;
+    src: url(/media/font/Roboto-Regular.ttf);
+  }
+  .container{
+    display: grid;
+    grid-template-rows: 0.01fr;
+    text-align: center;
+    width: max-content;
+    margin: auto;
+    height: 100vh;
+    margin-top: 45vh;
+    font-size: 30px;
+    border-radius: 5px;
+  }
+  .terug{
+    margin: auto;
+    width: 11%;
+    height: 6vh;
+    border: 1px solid black;
+    color: rgb(0, 0, 0);
+    background-color: rgb(193, 76, 76);
+    font-family: RobotoRegular;
+    background-color: var(--clr--main-color);
+    background-image: linear-gradient(to bottom right, var(--clr--main-color), var(--clr--secondary-color),var(--clr--tertiary-color));
+    background-size: cover;
+    border-radius: 7px;
+  }

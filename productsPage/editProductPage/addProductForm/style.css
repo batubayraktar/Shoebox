@@ -1,0 +1,204 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+    font-family: robotoRegular;
+}
+body {
+    height: 96vh;
+    background-color: var(--clr--main-color);
+    background-image: var(--gradient--mainGradient);
+}
+:root {
+    --clr--main-color: rgb(192, 230, 238);
+    --clr--secondary-color: rgb(233, 215, 210);
+    --clr--tertiary-color: rgba(245, 248, 249, 0.774);
+
+    --gradient--mainGradient: linear-gradient(to bottom right, var(--clr--main-color), var(--clr--secondary-color));
+}
+
+/* HEADER */
+#content {
+    margin-bottom: 30px;
+    width: 95vw;
+    background-color: var(--clr--tertiary-color);
+    margin: auto;
+    margin: 4vh auto 0px auto;
+    border-radius: 10px 10px 0 0;
+    padding: 30px;
+    box-shadow: rgba(0, 0, 0, 0.091) 0px 0px 30px;
+}
+#logo {
+    width: 100px;
+}
+
+header{
+    display: flex;
+    font-size: 20px;
+    flex-direction: column;
+}
+
+header > #obj_logo{
+    margin: auto;
+    margin-bottom: 40px;
+}
+
+header > .headerLinks > a{
+    margin: auto;
+    text-decoration: none;
+    font-size: x-large;
+    color: rgba(0, 0, 0, 0.795);
+}
+
+.headerLinks{
+    display: flex;
+}
+@media screen and (min-width: 740px) {
+    header {
+        padding: 0px 30px 0px 30px;
+        justify-content: space-between;
+        flex-direction: row;
+    }
+
+    .headerLinks > a {
+        margin: auto 0 auto 0;
+    }
+
+    .headerLinks > a:not(:first-child){
+        margin-left: 30px;
+    }
+    .headerLinks{
+        justify-content: space-between;
+    }
+
+    header > #obj_logo{
+        margin: 0;
+    }
+
+}
+
+@font-face {
+    font-family: robotoThin;
+    src: url(../../../media/font/Roboto-Thin.ttf);
+}
+@font-face {
+    font-family: robotoRegular;
+    src: url(../../../media/font/Roboto-Regular.ttf);
+}
+@font-face {
+    font-family: robotoBold;
+    src: url(../../../media/font/Roboto-Bold.ttf);
+}
+
+/* PAGE */
+#tabel{
+    border-top: 1px solid;
+    border-radius: 0px 0px 10px 10px;
+    width: 95vw;
+    margin: auto;
+    padding: 30px;
+    background-color: var(--clr--tertiary-color);
+    margin-bottom: 30px;
+}
+
+#contentInTabel{
+    width: 100%;
+    font-size: 15px;
+    margin: auto;
+    text-align: center;
+}
+
+th{
+    text-transform: uppercase;
+    background-color: rgb(0, 0, 0);
+    padding: 10px;
+    color: white;
+}
+
+td{
+    font-size: 12px;
+    padding: 5px;
+    background-color: rgb(202, 202, 202);
+}
+
+#knopTerugKeren{
+    margin-left: 2px;
+    width: 100px;
+    text-align: center;
+    padding: 10px;
+    background-color: black;
+    color: white;
+}
+
+#knopTerugKeren > a > button {
+    width: 100%;
+}
+
+#geheimText{
+    font-size: 3rem;
+    font-family: robotoBold;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+/* BEWERKMAIN */
+
+#bewerkMain{
+    border-radius: 10px;
+    width: 30vw;
+    margin: auto;
+    padding: 30px;
+    background-color: var(--clr--tertiary-color);
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+#formBewerk{
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 30px;
+}
+
+#formBewerk > input{
+    height: 35px;
+    padding-left: 10px;
+}
+
+#kopBewerkForm{
+    font-size: 1.5rem;
+    font-family: robotoBold;
+    margin-bottom: 10px;
+}
+
+#marginBottom{
+    width: 100%;
+    height: 10px;
+    margin-bottom: 30px;
+}
+
+#del-btn{
+    width: 100%;
+    margin: auto;
+    height: 35px;
+    background-color: crimson;
+    border-radius: 2px;
+    border: 1px solid;
+}
+
+
+.divjesEnKopjes > input{
+    width: 100%;
+    height: 35px;
+    padding-left: 10px;
+    max-width: 100%;
+    min-width: 100%;
+}
+
+.divjesEnKopjes > textarea{
+    width: 100%;
+    resize: none;
+}
+
+.divjesEnKopjes > div{
+    font-family: robotoBold;
+    margin-bottom: 10px;
+}

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Shoebox - Contact</title>
+    <link rel="stylesheet" href="./media/style.css">
+</head>
+<body>
+    <div id="content">
+        <header>
+            <div id="obj_logo"><a href="../index.html"><img id="logo" src="../media/logo/logo.png" alt=""></a></div>
+            <div class="headerLinks">
+                <a href="../productsPage/productsPage.html">Producten</a>
+                <a href="./contactPage.html">Contact</a>
+                <a href="../cartPage/cartPage.html">Winkelwagen</a>
+            </div>
+        </header>
+        <main>    
+            <div class="container">
+            <div class="links">
+                <div class="mapouter"><iframe width="598" height="1080" id="gmap_canvas" src="https://maps.google.com/maps?q=Grafisch%20Lyceum%20Rotterdam&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe></div>
+            </div>
+            <div class="rechts">
+                <h1 id="rechtsTitel">➠ Vragen? U kunt altijd contact met ons opnemen.</h1>
+                <form action="sendForm.php">
+                    <div class="formObjects">
+                    <label for="Naam">Contact gegevens:</label>
+                    <input type="text" name="Naam" id="naam" placeholder="Uw naam">
+                    <input type="email" name="Email" id="email" placeholder="Uw E-mail">
+                    <input type="tel" name="Nummer" id="nummer" placeholder="Uw 06 nummer">
+                    </div>
+                    <div id="radiosTitel">Reden om contact:</div>
+                    <div id="radios">
+                    <input type="radio" name="Reden" id="vraag" value="Vraag">
+                    <label for="vraag">Vraag</label>
+                    <input type="radio" name="Reden" id="klacht" value="Klacht">
+                    <label for="klacht">Klacht</label>
+                    <input type="radio" name="Reden" id="voorstel" value="Voorstel">
+                    <label for="voorstel">Voorstel</label>
+                    </div>
+                    <label for="Vraag">Hoe kunnen we u helpen?</label>
+                    <textarea name="Vraag" id="vraag" cols="30" rows="10" placeholder="Uw bericht"></textarea>
+                    <button type="submit" id="submit" class="button">Verzenden</button>
+                </form>
+            </div>
+        </div>
+    </main>
+    </div>
+
+</body>
+</html>

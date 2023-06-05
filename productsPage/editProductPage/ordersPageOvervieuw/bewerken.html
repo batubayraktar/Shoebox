@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Shoebox - Bewerk</title>
+    <link rel="stylesheet" href="./style.css">
+    
+</head>
+<body>
+    <div id="content" class="contttt">
+        <header>
+            <div id="obj_logo" style="margin-bottom: 0;"><a href="../editProductPage.html"><img id="logo" src="../../../media/logo/logo.png" alt=""></a></div>
+        </header>
+    </div>
+
+    <div id="tabel">
+        
+        <table id="contentInTabel">
+            <div id="knopTerugKeren"><a href="./ordersPageOvervieuw.html"><button>Terug</button></a></div><br>
+            <div id="kopBewerkForm">Klantgegevens</div>
+            <tr>
+                <th>id</th>
+                <th>Naam</th>
+                <th>E-mail</th>
+                <th>Nummer</th>
+                <th>Bezorgadres</th>
+                <th>Postcode</th>
+                <th>Stad</th>
+                <th>Provincie</th>
+                <th>Status</th>
+            </tr>
+
+          </table>
+        <div id="tabel2"><br>
+            <div id="kopBewerkForm">Bestelde producten</div>
+            <table id="contentInTabel2">
+                <tr>
+                    <th>product id</th>
+                    <th>product maat</th>
+                    <th>product aantal</th>
+                </tr>
+                
+            </table>
+        </div>          
+    </div>
+
+
+    <form name="formEdit" id="bewerkMain" action="./ordersPageOvervieuw.html">
+        <div id="kopBewerkForm">Bestelling bewerken</div>
+        <div id="formBewerk">
+            <input id="naam" type="text" placeholder="Naam" required>
+            <input id="mail" type="email" placeholder="E-mail" required>
+            <input id="nummer" type="text" placeholder="Nummer 06" pattern="[0-9]{10}" max="10" required >
+            <input id="bezorgadres" type="text" placeholder="Bezorgadres" required>
+            <input id="postcode" type="text" placeholder="Postcode" max="6" required>
+            <input id="stad" type="text" placeholder="Stad" required>
+            <input id="provincie" type="text" placeholder="Provincie" required>
+
+            <div>
+                <div id="kopBewerkForm">Status bewerken</div>
+                <span><input id="status1" type="radio" name="Status" value="Geplaatst" required> <label for="status1">Geplaatst</label></span><br>
+                <span><input id="status2" type="radio" name="Status" value="Onderweg" required> <label for="status2">Onderweg</label></span><br>            
+                <span><input id="status3" type="radio" name="Status" value="Afgeleverd" required> <label for="status3">Afgeleverd</label></span><br>
+            </div>
+
+            <input id="submit-btn" type="submit">
+        </div>
+    </form>
+
+    <form id="bewerkMain" action="./ordersPageOvervieuw.html">
+        <div>
+            <div id="kopBewerkForm">Bestelling verwijderen</div>
+        </div>
+        <input id="del-btn" type="submit">
+    </form>
+    <div id="marginBottom"></div>
+<script src="./scriptBewerk.js" defer></script>
+</body>
+</html>

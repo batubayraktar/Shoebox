@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Shoebox - Bewerk</title>
+    <link rel="stylesheet" href="./style.css">
+    
+</head>
+<body>
+    <div id="content" class="contttt">
+        <header>
+            <div id="obj_logo" style="margin-bottom: 0;"><a href="../editProductPage.html"><img id="logo" src="../../../media/logo/logo.png" alt=""></a></div>
+        </header>
+    </div>
+
+    <div id="tabel">
+        <table id="contentInTabel">
+            <div id="knopTerugKeren"><a href="./addProductForm.html"><button>Terug</button></a></div>
+            <tr>
+                <th>id</th>
+                <th>Naam</th>
+                <th>type</th>
+                <th>bechrijving</th>
+                <th>prijs</th>
+                <th>merk</th>
+                <th>min-maat</th>
+                <th>max-maat</th>
+              </tr>
+
+            <tr>
+              
+            </tr>
+            
+          </table>
+    </div>
+
+    <form name="formEdit" id="bewerkMain" action="./addProductForm.html">
+        <div id="kopBewerkForm">Product bewerken</div>
+        <div id="formBewerk">
+
+            <div class="divjesEnKopjes">
+                <div>Naam</div>
+                <input id="naam" type="text" placeholder="Naam" required>
+            </div>
+
+            <div class="divjesEnKopjes">
+                <div>Type</div>
+                <div>
+                    <span><input id="status1" type="radio" name="type" value="heren" required> <label for="status1">Heren</label></span><br>
+                    <span><input id="status2" type="radio" name="type" value="dames" required> <label for="status2">Dames</label></span><br>            
+                    <span><input id="status3" type="radio" name="type" value="jongens" required> <label for="status3">Jongens</label></span><br>
+                    <span><input id="status4" type="radio" name="type" value="meisjes" required> <label for="status4">Meisjes</label></span><br>
+                </div>
+            </div>
+            
+            <div class="divjesEnKopjes">
+                <div>Beschrijving</div>
+                <textarea rows="10" id="beschrijving" type="text" placeholder="beschrijving" required></textarea>
+            </div>
+
+            <div class="divjesEnKopjes">
+                <div>Prijs</div>
+                <input id="prijs" type="number" step=0.01 placeholder="prijs" required>
+            </div>
+
+            <div class="divjesEnKopjes">
+                <div>Merk</div>
+                <input id="merk" type="text" placeholder="merk" required>
+            </div>
+
+            <div class="divjesEnKopjes">
+                <div>Min-maat</div>
+                <input id="min-maat" type="number" placeholder="min-maat" min="16" max="48" required>
+            </div>
+
+            <div class="divjesEnKopjes">
+                <div>Max-maat</div>
+                <input id="max-maat" type="number" placeholder="max-maat"  min="16" max="48" required>
+            </div>
+
+            <input id="submit-btn" type="submit">
+        </div>
+    </form>
+
+    <form id="bewerkMain" action="./jsons/jsonDel.php">
+        <div>
+            <div id="kopBewerkForm">Product verwijderen</div>
+        </div>
+        <input id="del-btn" type="submit">
+    </form>
+    <div id="marginBottom"></div>
+<script src="./scriptBewerk.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Shoebox - Afreken</title>
+    <link rel="stylesheet" href="./media/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="script.js" defer></script>
+</head>
+<body>
+<div id="content">
+        <header>
+            <div id="obj_logo"><a href=""><img id="logo" src="../media/logo/logo.png" alt=""></a></div>
+            <div class="headerLinks">
+                <a href="../productsPage/productsPage.html">Producten</a>
+                <a href="../contactPage/contactPage.html">Contact</a>
+                <a href="../cartPage/cartPage.html">Winkelwagen</a>
+            </div>
+        </header>
+        <main>    
+        <div class="container">
+        <div class="links">
+            <h3 class="linksTitel">BEZORGADRES</h3>
+            <form method="post" action="sendForm.php">
+                <input type="hidden" id="myJson" name="myJson">
+                <fieldset>
+                    <input type="text" name="voornaam" id="voornaam" placeholder="Voornaam*" required>
+                    <input type="text" name="achternaam" id="achternaam" placeholder="Achternaam*" required>
+                    <input type="email" name="e-mail" id="e-mail" placeholder="E-mail*" required>
+                </fieldset>
+                <br>
+                <fieldset>
+                    <input type="text" name="adres" id="adres" placeholder="Adres*" required>
+                </fieldset>
+                <br>
+                <fieldset>
+                    <input type="text" name="stad" id="stad" placeholder="Stad*">
+                    <div class="inputvelden">
+                        <select id="provincie" name="provincie">
+                        <option value="" disabled selected>Provincie*</option>
+                        <option value="Groningen">Groningen</option>
+                        <option value="Friesland">Friesland</option>
+                        <option value="Drenthe">Drenthe</option>
+                        <option value="Overijssel">Overijssel</option>
+                        <option value="Flevoland">Flevoland</option>
+                        <option value="Gelderland">Gelderland</option>
+                        <option value="Utrecht">Utrecht</option>
+                        <option value="Noord-Holland">Noord-Holland</option>
+                        <option value="Zuid-Holland">Zuid-Holland</option>
+                        <option value="Zeeland">Zeeland</option>
+                        <option value="Noord-Brabant">Noord-Brabant</option>
+                        <option value="Limburg">Limburg</option>
+                    </select>
+                    <input type="text" name="postcode" id="postcode" placeholder="Postcode*" maxlength="6">
+                    </div>
+                    <input type="tel" name="telefoonnummer" id="telefoonnummer" placeholder="Telefoonnummer*" maxlength="10" required>
+                </fieldset>
+                <br><br>
+                <h3 class="linksTitel2">CARDGEGEVENS</h3>
+                <fieldset>
+                    <input type="text" id="cardnummer" name="cardnummer" placeholder="Cardnummer" required>
+                    <div class="inputvelden">
+                    <input type="text" name="vervaldatum" id="vervaldatum" placeholder="Vervaldatum (MM/JJ)" maxlength="5"required>
+                    <input type="text" name="cvv" id="cvv" placeholder="CVV" maxlength="3" required>
+                    </div>
+                    <input type="text" name="naamopdecard" id="naamopdecard" placeholder="Naam op card"required>
+                    <h4 class="cards">We accepteren:</h4>
+                    <div class="cardsImg">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Mastercard_2019_logo.svg/800px-Mastercard_2019_logo.svg.png" width="50" height="30" alt="">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d6/Visa_2021.svg/2560px-Visa_2021.svg.png" width="60" height="30" alt="">
+                    </div>
+                </fieldset>
+                <button type="submit" id="submit" class="button">Verzenden</button>
+            </form>
+        </div>
+        </div>
+        </div>
+</main>
+        </div>
+        
+</body>
+</html>

@@ -1,0 +1,232 @@
+*{
+  box-sizing: border-box;
+}
+
+body{
+    font-family: Roboto-Regular;
+    background-color: var(--clr--main-color);
+    background-image: linear-gradient(to bottom right, var(--clr--secondary-color),var(--clr--tertiary-color));
+    background-size: cover;
+}
+:root{
+    --clr--main-color: rgb(192, 230, 238);
+    --clr--secondary-color: rgb(233, 215, 210);
+    --clr--tertiary-color: rgba(245, 248, 249, 0.774);
+
+    --gradient--mainGradient: linear-gradient(to bottom right, var(--clr--main-color), var(--clr--secondary-color));
+
+}
+@font-face {
+    font-family: RobotoBold;
+    src: url(../../media/font/Roboto-Bold.ttf);
+}
+@font-face {
+  font-family: RobotoRegular;
+  src: url(../../media/font/Roboto-Regular.ttf);
+}
+#content {
+  font-family: RobotoRegular;
+  width: 95vw;
+  min-height: 92vh;
+  background-color: var(--clr--tertiary-color);
+  margin: auto;
+  margin: 4vh auto 4vh auto;
+  border-radius: 10px;
+  padding: 30px;
+  box-shadow: rgba(0, 0, 0, 0.091) 0px 0px 30px;
+}
+
+#logo {
+  width: 100px;
+}
+header{
+  display: flex;
+  font-size: 20px;
+  flex-direction: column;
+  margin-bottom: 30px;
+}
+
+header > #obj_logo{
+  margin: auto;
+  margin-bottom: 40px;
+}
+
+header > .headerLinks > a{
+  margin: auto;
+  text-decoration: none;
+  font-size: x-large;
+  color: rgba(0, 0, 0, 0.795);
+}
+
+.headerLinks{
+  display: flex;
+}
+
+a:visited{
+  color: black;
+}
+
+.button{
+  background-image: var(--gradient--mainGradient);
+  padding: 1px 30px;
+}
+
+@media screen and (min-width: 740px) {
+  header {
+      padding: 0px 30px 0px 30px;
+      justify-content: space-between;
+      flex-direction: row;
+  }
+
+  .headerLinks > a {
+      margin: auto 0 auto 0;
+  }
+   
+  .headerLinks > a:not(:first-child){
+      margin-left: 30px;
+  }
+  .headerLinks{
+      justify-content: space-between;
+  }
+
+  header > #obj_logo{
+      margin: 0;
+  }
+}
+form{
+  box-sizing: border-box;
+}
+
+main{
+  height: 100%;
+}
+@media screen and (max-width: 700px) {
+
+  .links{
+    display: none;
+    width: 0vw;
+    height: 0vh;
+    grid-area: 0;
+  }
+  .rechts { 
+    grid-area: rechts;
+    width: 100%;
+    margin-left: -50%;
+}
+}
+.container {  
+  height: 100%;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 30px;
+    grid-auto-flow: row;
+    height: 100%;
+    grid-template-areas:
+      "links rechts";
+  }
+  
+  .links {
+    grid-area: links;
+    background-color: var(--clr--main-color);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: rgba(0, 0, 0, 0.185) 0px 0px 30px;
+  }
+  
+  .rechts { 
+    grid-area: rechts;
+    width: 100%;
+
+}
+
+  #rechtsTitel{
+    font-family: RobotoBold;
+    margin-top: 0%;
+    font-size: x-large;
+  }
+
+  label{
+    display: block;
+    margin-top: 5%;
+    font-family: RobotoRegular;
+  } 
+  .formObjects input{
+    height: 40px;
+    width: 100%;
+    font-family: RobotoRegular;
+    font-size: 16px;
+    padding-left: 10px;
+    border-radius: 7px;
+    color: black;
+
+    border: 0px;
+    box-shadow: rgba(0, 0, 0, 0.189) 0px 0px 5px;
+    background-color: rgba(255, 255, 255, 0.795);
+  }
+  #radios{
+   display: inline-flex;
+  }
+  #radios label{
+   font-family: RobotoRegular;
+   text-align: center;
+  }
+   #radios input{
+    margin-top: 8%;
+   }
+   #klacht, #voorstel{
+    margin-left: 5%;
+   }
+  #radiosTitel{
+    margin-top: 5%;
+    font-family: RobotoRegular;
+  }
+
+  textarea{
+    padding-left: 8px;
+    resize: none;
+    height: 15vh;
+    width: 30vw;
+    font-size: 16px;
+    border: 0px;
+    box-shadow: rgba(0, 0, 0, 0.189) 0px 0px 5px;
+    background-color: rgba(255, 255, 255, 0.795);
+    border-radius: 7px;
+    font-family: RobotoRegular;
+    margin-bottom: 25px;
+  }
+   
+  #submit{
+    height: 5vh;
+    border: none;
+    box-shadow: rgba(0, 0, 0, 0.189) 2px 2px 5px;
+    color: rgb(0, 0, 0);
+    background-color: rgb(193, 76, 76);
+    font-family: RobotoRegular;
+    background-color: var(--clr--main-color);
+    background-image: linear-gradient(to bottom right, var(--clr--main-color), var(--clr--secondary-color));
+    background-size: cover;
+    border-radius: 7px;
+  }
+
+
+ .links iframe{
+    width: 40%;
+    height:100%;
+  }
+
+  .mapouter{
+    width: 100%;
+    height: 100%;
+  }
+  #gmap_canvas{
+    width: 100%;
+    height: 100%;
+  }
+  label{
+    margin-bottom: 5px;
+  }
+
+  input{
+    margin-bottom: 5px;
+  }

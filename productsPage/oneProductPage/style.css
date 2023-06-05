@@ -1,0 +1,533 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+    font-family: robotoRegular;
+}
+body {
+
+    background-color: var(--clr--main-color);
+    background-image: var(--gradient--mainGradient);
+}
+:root {
+    --clr--main-color: rgb(192, 230, 238);
+    --clr--secondary-color: rgb(233, 215, 210);
+    --clr--tertiary-color: rgba(245, 248, 249, 0.774);
+
+    --gradient--mainGradient: linear-gradient(to bottom right, var(--clr--main-color), var(--clr--secondary-color));
+}
+
+/* HEADER */
+#content {
+    width: 95vw;
+    background-color: var(--clr--tertiary-color);
+    margin: auto;
+    margin: 4vh auto 0px auto;
+    border-radius: 10px 10px 0px 0px;
+    padding: 30px;
+    box-shadow: rgba(0, 0, 0, 0.091) 0px 0px 30px;
+}
+#logo {
+    width: 100px;
+}
+
+header{
+    display: flex;
+    font-size: 20px;
+    flex-direction: column;
+}
+
+header > #obj_logo{
+    margin: auto;
+    margin-bottom: 40px;
+}
+
+header > .headerLinks > a{
+    margin: auto;
+    text-decoration: none;
+    font-size: x-large;
+    color: rgba(0, 0, 0, 0.795);
+}
+
+.headerLinks{
+    display: flex;
+}
+@media screen and (min-width: 740px) {
+    header {
+        padding: 0px 30px 0px 30px;
+        justify-content: space-between;
+        flex-direction: row;
+    }
+
+    .headerLinks > a {
+        margin: auto 0 auto 0;
+    }
+
+    .headerLinks > a:not(:first-child){
+        margin-left: 30px;
+    }
+    .headerLinks{
+        justify-content: space-between;
+    }
+
+    header > #obj_logo{
+        margin: 0;
+    }
+
+}
+
+@font-face {
+    font-family: robotoThin;
+    src: url(../../media/font/Roboto-Thin.ttf);
+}
+@font-face {
+    font-family: robotoRegular;
+    src: url(../../media/font/Roboto-Regular.ttf);
+}
+@font-face {
+    font-family: robotoBold;
+    src: url(../../media/font/Roboto-Bold.ttf);
+}
+
+/* PAGE */
+
+/* CONTAINERS */
+
+@media (min-width: 1200px) {
+    #slider2Kop{
+        font-family: robotoBold;
+        font-size: 1.2rem;
+        text-align: center;
+        text-transform: uppercase;
+    }
+    .smIMG{
+        width: 100%;
+    }
+    .containerOtherShoes{
+        min-height: 75vh;
+    }
+    #slider2Shoes{
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+    .containerInfo {  
+        display: grid;
+        grid-template-columns: 1fr 2.5fr;
+        gap: 0px 30px; 
+        grid-template-rows: auto auto auto auto auto;
+        grid-template-areas:
+          "shoeTitle containerSlider"
+          "shoeType containerSlider"
+          "shoeTextObj containerSlider"
+          "shoePrijsObj containerSlider"
+          "bottomObjMaatEnAantal containerSlider";
+        }
+      
+      .shoeTitle { grid-area: shoeTitle; }
+      
+      .shoeType { grid-area: shoeType; }
+      
+      .shoeTextObj { grid-area: shoeTextObj; }
+      
+      .shoePrijsObj { grid-area: shoePrijsObj; }
+      
+      .bottomObjMaatEnAantal { grid-area: bottomObjMaatEnAantal; }
+      
+      .containerSlider { grid-area: containerSlider; }
+      
+    #mainContent{
+        width: 95vw;
+        margin: auto;
+        border-top: 1px solid black;
+        background-color: var(--clr--tertiary-color);
+        border-radius: 0px 0px 10px 10px;
+        margin-bottom: 30px;
+        padding: 30px;
+    
+    }
+    .container {
+        height: 100%;
+        display: grid;
+        grid-template-columns: 3.5fr 0.5fr;
+        grid-template-rows: 1fr;
+        grid-auto-columns: 1fr;
+        gap: 30px 30px;
+        grid-auto-flow: row;
+        grid-template-areas:"containerInfo containerOtherShoes";
+    }
+  
+    .containerInfo { grid-area: containerInfo; }
+    
+    .containerSlider { grid-area: containerSlider; }
+    
+    .containerOtherShoes { grid-area: containerOtherShoes; }
+
+    #shoeTitle{
+        font-family: robotoBold;
+        font-size: larger;
+        font-size: 30px;
+        font-weight: 1000;
+    }
+
+    #shoeType{
+        margin-top: 5px;
+        opacity: 75%;
+        text-transform: capitalize;
+        border-bottom: 1px solid;
+        padding-bottom: 20px;
+    }
+
+    #shoeTextObj{
+        margin-top: 20px;
+    }
+        
+    #shoeTextKop{
+        font-size: 20px;
+        text-transform: uppercase;
+        margin-bottom: 10px;
+        font-weight: 1000;
+    }
+
+    #shoeText{
+        opacity: 75%;
+    }
+
+
+    /* CONTAINER MAAT AANTAL TOSESSION */
+
+    #bottomObjMaatEnAantal {
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-auto-columns: 1fr;
+        gap: 10px 10px;
+        grid-auto-flow: row;
+        grid-template-areas:
+        "maten aantal"
+        "setToSessionButton setToSessionButton";
+    }
+    
+    #maten { 
+        grid-area: maten;
+    }
+    
+    #aantal { 
+        grid-area: aantal; 
+    }
+    
+    #setToSessionButton { 
+        grid-area: setToSessionButton; 
+    }
+    #maten, #aantal{
+        padding-left: 10px;
+        height: 35px;
+    }
+    #maten, #aantal, #toSession{
+        border: 1px solid;
+        border-radius: 10px;
+        width: 100%;
+    }
+    #toSession{
+        height: 50px;
+        font-family: robotoBold;
+        font-size: larger;
+    }
+    /* BUTTONS TO BOTTOM */
+    .containerInfo{
+        position: relative;
+    }
+
+    #bottomObjMaatEnAantal {
+        bottom: 0px;
+    }
+
+    #shoePrice{
+        margin-top: 20px;
+        font-family: robotoBold;
+        font-size: 30px;
+        text-align: end;
+    }
+}
+
+@media (max-width: 1200px) {
+
+    #slider2Kop{
+        font-family: robotoBold;
+        font-size: 1.2rem;
+        text-align: center;
+        text-transform: uppercase;
+    }
+    .smIMG{
+        vertical-align: middle;
+        width: 100%;
+        padding: 15px;
+    }
+    #slider2Shoes{
+        margin-top: 30px;
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        
+    }
+
+    #mainContent{
+        width: 95vw;
+        margin: auto;
+        border-top: 1px solid black;
+        background-color: var(--clr--tertiary-color);
+        border-radius: 0px 0px 10px 10px;
+        margin-bottom: 30px;
+        padding: 30px;
+    
+    }
+    .container {
+        height: 100%;
+    }
+    .containerSlider{
+        height: 400px;
+    }
+
+    #shoeTitle{
+        font-family: robotoBold;
+        font-size: larger;
+        font-size: 30px;
+        font-weight: 1000;
+    }
+
+    #shoeType{
+        margin-top: 5px;
+        opacity: 75%;
+        text-transform: capitalize;
+        border-bottom: 1px solid;
+        padding-bottom: 20px;
+    }
+
+    #shoeTextObj{
+        margin-top: 20px;
+    }
+
+    #shoeTextKop{
+        font-size: 20px;
+        text-transform: uppercase;
+        margin-bottom: 10px;
+        font-weight: 1000;
+    }
+
+    #shoeText{
+        opacity: 75%;
+    }
+
+
+    /* CONTAINER MAAT AANTAL TOSESSION */
+
+    #bottomObjMaatEnAantal {
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-auto-columns: 1fr;
+        gap: 10px 10px;
+        grid-auto-flow: row;
+        grid-template-areas:
+        "maten aantal"
+        "setToSessionButton setToSessionButton";
+    }
+    
+    #maten { 
+        grid-area: maten;
+    }
+    
+    #aantal { 
+        grid-area: aantal; 
+    }
+    
+    #setToSessionButton { 
+        grid-area: setToSessionButton; 
+    }
+    #maten, #aantal{
+        padding-left: 10px;
+        height: 35px;
+    }
+    #maten, #aantal, #toSession{
+        border: 1px solid;
+        border-radius: 10px;
+        width: 100%;
+    }
+    #toSession{
+        height: 50px;
+        font-family: robotoBold;
+        font-size: larger;
+    }
+    /* BUTTONS TO BOTTOM */
+    .containerInfo{
+        position: relative;
+    }
+
+    #bottomObjMaatEnAantal {
+        bottom: 0px;
+    }
+
+    #shoePrice{
+        margin-top: 20px;
+        font-family: robotoBold;
+        font-size: 30px;
+        text-align: end;
+    }
+}
+
+
+/*
+PURE RESPONSIVE CSS3 SLIDESHOW GALLERY by Roko C. buljan
+http://stackoverflow.com/a/34696029/383904
+*/
+
+.CSSgal {
+	position: relative;
+	overflow: hidden;
+	height: 100%; /* Or set a fixed height */
+}
+
+/* SLIDER */
+
+.CSSgal .slider {
+	height: 100%;
+	white-space: nowrap;
+	font-size: 0;
+	transition: 0.8s;
+}
+
+/* SLIDES */
+
+.CSSgal .slider > * {
+	font-size: 1rem;
+	display: inline-block;
+	white-space: normal;
+	vertical-align: top;
+	height: 100%;
+	width: 100%;
+	background: none 50% no-repeat;
+	background-size: cover;
+}
+
+/* PREV/NEXT, CONTAINERS & ANCHORS */
+
+.CSSgal .prevNext {
+	position: absolute;
+	z-index: 1;
+	top: 50%;
+	width: 100%;
+	height: 0;
+}
+
+.CSSgal .prevNext > div+div {
+	visibility: hidden; /* Hide all but first P/N container */
+}
+
+.CSSgal .prevNext a {
+	background: #fff;
+	position: absolute;
+	width:       40px;
+	height:      40px;
+	line-height: 40px; /* If you want to place numbers */
+	text-align: center;
+	opacity: 0.7;
+	-webkit-transition: 0.3s;
+					transition: 0.3s;
+	-webkit-transform: translateY(-50%);
+					transform: translateY(-50%);
+	left: 0;
+}
+.CSSgal .prevNext a:hover {
+	opacity: 1;
+}
+.CSSgal .prevNext a+a {
+	left: auto;
+	right: 0;
+}
+
+/* NAVIGATION */
+
+.CSSgal .bullets {
+	position: absolute;
+	z-index: 2;
+	bottom: 0;
+	padding: 10px 0;
+	width: 100%;
+	text-align: end;
+}
+.CSSgal .bullets > a {
+	display: inline-block;
+	width:       10px;
+	height:      10px;
+	line-height: 10px;
+	text-decoration: none;
+	text-align: center;
+	background: rgb(0, 0, 0);
+	-webkit-transition: 0.3s;
+					transition: 0.3s;
+}
+.CSSgal .bullets > a+a {
+	background: rgba(0, 0, 0, 0.5); /* Dim all but first */
+}
+.CSSgal .bullets > a:hover {
+	background: rgba(240, 17, 17, 0.7) !important;
+}
+
+/* NAVIGATION BUTTONS */
+/* ALL: */
+.CSSgal >s:target ~ .bullets >* {      background: rgba(145, 145, 145, 0.5);}
+/* ACTIVE */
+#s1:target ~ .bullets >*:nth-child(1) {background: rgb(61, 61, 61);}
+#s2:target ~ .bullets >*:nth-child(2) {background: rgb(61, 61, 61);}
+#s3:target ~ .bullets >*:nth-child(3) {background: rgb(61, 61, 61);}
+#s4:target ~ .bullets >*:nth-child(4) {background: rgb(61, 61, 61);}
+/* More slides? Add here more rules */
+
+/* PREV/NEXT CONTAINERS VISIBILITY */
+/* ALL: */
+.CSSgal >s:target ~ .prevNext >* {      visibility: hidden;}
+/* ACTIVE: */
+#s1:target ~ .prevNext >*:nth-child(1) {visibility: visible;}
+#s2:target ~ .prevNext >*:nth-child(2) {visibility: visible;}
+#s3:target ~ .prevNext >*:nth-child(3) {visibility: visible;}
+#s4:target ~ .prevNext >*:nth-child(4) {visibility: visible;}
+/* More slides? Add here more rules */
+
+/* SLIDER ANIMATION POSITIONS */
+
+#s1:target ~ .slider {transform: translateX(   0%); -webkit-transform: translateX(   0%);}
+#s2:target ~ .slider {transform: translateX(-100%); -webkit-transform: translateX(-100%);}
+#s3:target ~ .slider {transform: translateX(-200%); -webkit-transform: translateX(-200%);}
+#s4:target ~ .slider {transform: translateX(-300%); -webkit-transform: translateX(-300%);}
+/* More slides? Add here more rules */
+
+
+/* YOU'RE THE DESIGNER! 
+   ____________________
+   All above was mainly to get it working :)
+   CSSgal CUSTOM STYLES / OVERRIDES HERE: */
+
+.CSSgal{
+	color: #fff;	
+	text-align: center;
+}
+.CSSgal .slider h2 {
+	margin-top: 40vh;
+	letter-spacing: -0.06em;
+	word-spacing: 0.2em;
+	font-size: 3em;
+}
+.CSSgal a {
+	border-radius: 50%;
+	margin: 0 3px;
+	color: rgba(0,0,0,0.8);
+	text-decoration: none;
+}
+
+#slide1,#slide2,#slide3,#slide4{
+    margin-top: 10%     ;
+    height: 60%;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}

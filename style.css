@@ -1,0 +1,146 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --clr--main-color: rgb(192, 230, 238);
+    --clr--secondary-color: rgb(233, 215, 210);
+    --clr--tertiary-color: rgba(245, 248, 249, 0.774);
+
+    --gradient--mainGradient: linear-gradient(to bottom right, var(--clr--main-color), var(--clr--secondary-color));
+}
+
+@font-face {
+    font-family: robotoThin;
+    src: url(media/font/Roboto-Thin.ttf);
+}
+@font-face {
+    font-family: robotoRegular;
+    src: url(media/font/Roboto-Regular.ttf);
+}
+@font-face {
+    font-family: robotoBold;
+    src: url(media/font/Roboto-Bold.ttf);
+}
+
+body {
+    font-family: robotoRegular;
+    background-color: var(--clr--main-color);
+    background-image: var(--gradient--mainGradient);
+    overflow: auto;
+}
+
+#content {
+    width: 95vw;
+    min-height: 92vh;
+    background-color: var(--clr--tertiary-color);
+    margin: auto;
+    margin: 4vh auto 4vh auto;
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: rgba(0, 0, 0, 0.285) 0px 0px 30px;
+}
+
+#logo {
+    width: 100px;
+}
+
+header{
+    display: flex;
+    font-size: 20px;
+    flex-direction: column;
+    margin-bottom: 80px;
+}
+
+header > #obj_logo{
+    margin: auto;
+    margin-bottom: 40px;
+}
+
+header > .headerLinks > a{
+    margin: auto;
+    text-decoration: none;
+    font-size: x-large;
+    color: rgba(0, 0, 0, 0.795);
+}
+
+.headerLinks{
+    display: flex;
+}
+
+a:visited{
+    color: black;
+}
+
+#indexContent{
+text-align: right;
+}
+
+#indexContent > img{
+    max-width: 100%;
+    max-height: 72vh;
+}
+
+#indexContent > h1{
+    text-align: left;
+    color: black;
+}
+
+.button{
+    background-image: var(--gradient--mainGradient);
+    padding: 10px 60px;
+    text-decoration: none;
+    border-radius: 15px;
+    box-shadow: 1;
+    box-shadow: rgba(0, 0, 0, 0.189) 2px 2px 5px;  
+}
+
+@media screen and (min-width: 740px) {
+    header {
+        padding: 0px 30px 0px 30px;
+        justify-content: space-between;
+        flex-direction: row;
+    }
+
+    .headerLinks > a {
+        margin: auto 0 auto 0;
+    }
+
+    .headerLinks > a:not(:first-child){
+        margin-left: 30px;
+    }
+    .headerLinks{
+        justify-content: space-between;
+    }
+
+    header > #obj_logo{
+        margin: 0;
+    }
+
+}
+@media screen and (min-width: 900px) {
+    #indexContent{
+    }
+
+    #indexContent > img{
+        max-width: 50%;
+        position: absolute;
+        top: 140px;
+        right: 5%;
+    }
+
+    #indexContent > h1{
+        top: 200px;
+        left: 10%;
+        font-size: 80px;
+        position: absolute;
+
+    }
+
+    #indexContent > .button{
+        position: absolute;
+        bottom: 20%;
+        left: 13%;
+    }
+}

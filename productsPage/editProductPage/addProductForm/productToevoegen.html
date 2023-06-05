@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Shoebox - Toevoeg</title>
+    <link rel="stylesheet" href="./style.css">
+    
+</head>
+<body>
+    <div id="content" class="contttt">
+        <header>
+            <div id="obj_logo" style="margin-bottom: 0;"><a href="../editProductPage.html"><img id="logo" src="../../../media/logo/logo.png" alt=""></a></div>
+        </header>
+    </div>
+
+    <form action="./jsons/jsonToevoegProduct.php" method="post" enctype="multipart/form-data" name="formEdit" id="bewerkMain" >
+        <div id="kopBewerkForm">Product toevoegen</div>
+        <div id="formBewerk">
+
+            <div class="divjesEnKopjes">
+                <div>Naam</div>
+                <input id="naam" name="naam" type="text" placeholder="Naam" required>
+            </div>
+
+            <div class="divjesEnKopjes">
+                <div>Type</div>
+                <div>
+                    <span><input id="status1" type="radio" name="type" value="heren" required> <label for="status1">Heren</label></span><br>
+                    <span><input id="status2" type="radio" name="type" value="dames" required> <label for="status2">Dames</label></span><br>            
+                    <span><input id="status3" type="radio" name="type" value="jongens" required> <label for="status3">Jongens</label></span><br>
+                    <span><input id="status4" type="radio" name="type" value="meisjes" required> <label for="status4">Meisjes</label></span><br>
+                </div>
+            </div>
+            
+            <div class="divjesEnKopjes">
+                <div>Beschrijving</div>
+                <textarea rows="10" id="beschrijving" name="beschrijving" type="text" placeholder="beschrijving" required></textarea>
+            </div>
+
+            <div class="divjesEnKopjes">
+                <div>Prijs</div>
+                <input id="prijs" type="number" name="prijs" step=0.01 placeholder="prijs" required>
+            </div>
+
+            <div class="divjesEnKopjes">
+                <div>Merk</div>
+                <input id="merk" type="text" name="merk" placeholder="merk" required>
+            </div>
+
+            <div class="divjesEnKopjes">
+                <div>Min-maat</div>
+                <input id="min-maat" type="number" name="min-maat" placeholder="min-maat" min="16" max="48" required>
+            </div>
+
+            <div class="divjesEnKopjes">
+                <div>Max-maat</div>
+                <input id="max-maat" type="number" name="max-maat" placeholder="max-maat"  min="16" max="48" required>
+            </div>
+            <div class="divjesEnKopjes">
+                <div>Afbeelding 1</div>
+                <span>Bestanden mogen niet groter zijn dan 500kB oftewel 0.5mB en alleen png worden toegelaten</span>
+                <input id="imgs" type="file" name="bestand1" required accept="png">
+            </div>
+            <div class="divjesEnKopjes">
+                <div>Afbeelding 2</div>
+                <input id="imgs" type="file" name="bestand2" required accept="png">
+            </div>
+            <div class="divjesEnKopjes">
+                <div>Afbeelding 3</div>
+                <input id="imgs" type="file" name="bestand3" required accept="png">
+            </div>
+            <div class="divjesEnKopjes">
+                <div>Afbeelding 4</div>
+                <input id="imgs" type="file" name="bestand4" required accept="png">
+            </div>
+
+            <input id="toevoegenProduct" name="submit" type="submit">
+        </div>
+    </form>
+
+    
+    <div id="marginBottom"></div>
+</body>
+</html>

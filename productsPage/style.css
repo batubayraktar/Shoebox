@@ -1,0 +1,192 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+    font-family: robotoRegular;
+}
+body {
+
+    background-color: var(--clr--main-color);
+    background-image: var(--gradient--mainGradient);
+    min-height: 100vh;
+    height: 100%;
+}
+:root {
+    --clr--main-color: rgb(192, 230, 238);
+    --clr--secondary-color: rgb(233, 215, 210);
+    --clr--tertiary-color: rgba(245, 248, 249, 0.774);
+
+    --gradient--mainGradient: linear-gradient(to bottom right, var(--clr--main-color), var(--clr--secondary-color));
+}
+
+/* HEADER */
+#content {
+    width: 95vw;
+    background-color: var(--clr--tertiary-color);
+    margin: auto;
+    margin: 4vh auto 0px auto;
+    border-radius: 10px 10px 0px 0px;
+    padding: 30px;
+    box-shadow: rgba(0, 0, 0, 0.091) 0px 0px 30px;
+}
+#logo {
+    width: 100px;
+}
+
+header{
+    display: flex;
+    font-size: 20px;
+    flex-direction: column;
+}
+
+header > #obj_logo{
+    margin: auto;
+    margin-bottom: 40px;
+}
+
+header > .headerLinks > a{
+    margin: auto;
+    text-decoration: none;
+    font-size: x-large;
+    color: rgba(0, 0, 0, 0.795);
+}
+
+.headerLinks{
+    display: flex;
+}
+@font-face {
+    font-family: robotoThin;
+    src: url(../media/font/Roboto-Thin.ttf);
+}
+@font-face {
+    font-family: robotoRegular;
+    src: url(../media/font/Roboto-Regular.ttf);
+}
+@font-face {
+    font-family: robotoBold;
+    src: url(../media/font/Roboto-Bold.ttf);
+}
+@media screen and (min-width: 740px) {
+    header {
+        padding: 0px 30px 0px 30px;
+        justify-content: space-between;
+        flex-direction: row;
+    }
+
+    .headerLinks > a {
+        margin: auto 0 auto 0;
+    }
+
+    .headerLinks > a:not(:first-child){
+        margin-left: 30px;
+    }
+    .headerLinks{
+        justify-content: space-between;
+    }
+
+    header > #obj_logo{
+        margin: 0;
+    }
+
+}
+
+
+/* ????? */
+
+@media (max-width: 800px) {
+    #products{
+        width: 95vw;
+        margin: auto;
+        gap: 30px;
+        display: grid;
+        grid-template-columns: 1fr;
+        margin-bottom: 30px;
+    }
+}
+@media (min-width: 800px) {
+    #products{
+        width: 95vw;
+        margin: auto;
+        gap: 30px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        margin-bottom: 30px;
+    }
+
+}
+@media (min-width: 1400px) {
+    #products{
+        width: 95vw;
+        margin: auto;
+        gap: 30px;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+        margin-bottom: 30px;
+    }
+
+}
+
+.product_obj{
+    border-radius: 10px;
+    height: 100%;
+    background-color: var(--clr--tertiary-color);
+    width: 100%;
+    padding: 30px;
+}
+.product_obj:hover{
+    -webkit-box-shadow: 0px 0px 15px 5px #FFFFFF; 
+    box-shadow: 0px 0px 15px 5px #FFFFFF;
+}
+
+.product_img{
+    width: 100%;
+}
+
+.title{
+    font-size: 30px;
+    font-family: robotoBold;
+}
+
+.shoePrice{
+    margin-top: 20px;
+    font-size: 30px;
+    font-family: robotoBold;
+    text-align: end;
+}
+.oldPrice{
+    font-size: 18px;
+    color: crimson;
+    text-decoration: line-through;
+}
+
+a{
+    text-decoration: none;
+    color: currentColor;
+}
+
+#filters{
+    width: 95vw;
+    padding: 20px;
+    background-color: var(--clr--tertiary-color);
+    margin: auto;
+    border-radius: 0px 0px 10px 10px;
+    display: grid;
+    grid-template-columns: 100px 1fr 1fr 1fr 1fr;
+    text-align: center;
+    margin-bottom: 30px;
+    border-top: 1px solid;
+}
+
+#resetBtn{
+    width: 100%;
+    height: 100%;
+    background-color: var(--clr--tertiary-color);
+    border: 1px solid;
+    border-radius: 10px;
+}
+
+#productAdd{
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    top: 0;
+}
